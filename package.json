@@ -5,7 +5,8 @@
   "scripts": {
     "lint": "eslint ./src",
     "lint-fix": "eslint ./src --fix",
-    "start": "webpack-dev-server --content-base example/ --progress --inline --hot --colors"
+    "start": "webpack-dev-server --content-base example/ --progress --inline --hot --colors",
+    "test": "mocha ./src/**/*.spec.js"
   },
   "repository": {
     "type": "git",
