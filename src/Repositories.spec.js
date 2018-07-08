@@ -44,4 +44,18 @@ describe('<Repositories />', () => {
     const wrapper = shallow(<Repositories repositories={repos} top={2} />);
     expect(wrapper.find(Repository)).to.have.length(2);
   });
+
+  it('should display repos ordered by stargazers', () => {
+    const sortedTestData = repos.sort((a, b) => (b.stargazers_count - a.stargazers_count));
+    const wrapper = shallow(<Repositories repositories={repos} top={2} />);
+
+    const topRepos = wrapper.find(Repository);
+
+    topRepos.forEach((repo, index) => {
+      expect(repo.prop('url')).to.equal(sortedTestData[index].url);
+      expect(repo.prop('name')).to.equal(sortedTestData[index].name);
+      expect(repo.prop('language')).to.equal(sortedTestData[index].language);
+      expect(repo.prop('stars')).to.equal(sortedTestData[index].stargazers_count);
+    });
+  })
 });
