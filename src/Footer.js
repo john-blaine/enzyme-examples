@@ -20,9 +20,4 @@ const Footer = ({ userUrl = '', lastActiveDate = {} }) => (
   )
 );
 
-Footer.propTypes = {
-  userUrl: PropTypes.string,
-  lastActiveDate: PropTypes.object,
-};
-
 export default Footer;

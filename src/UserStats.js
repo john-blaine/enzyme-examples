@@ -17,10 +17,4 @@ const UserStats = ({ followers = 0, following = 0, repositories = 0 }) => (
   </div>
 ));
 
-UserStats.propTypes = {
-  followers: PropTypes.number,
-  following: PropTypes.number,
-  repositories: PropTypes.number,
-};
-
 export default UserStats;

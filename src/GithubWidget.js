@@ -1,5 +1,5 @@
 // Libs
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 import moment from 'moment';
 import get from './api';
 
@@ -22,9 +22,6 @@ const getLastPushDate = (repositories = []) => {
 };
 
 class GithubWidget extends Component {
-  static propTypes = {
-    username: PropTypes.string.isRequired,
-  };
 
   state = {
     userDetails: {},

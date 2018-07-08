@@ -19,12 +19,4 @@ const UserDetails = ({ imageUrl = '', username = '', name = '', bio = '', locati
   </div>
 ));
 
-UserDetails.propTypes = {
-  imageUrl: PropTypes.string,
-  username: PropTypes.string,
-  name: PropTypes.string,
-  bio: PropTypes.string,
-  location: PropTypes.string,
-};
-
 export default UserDetails;

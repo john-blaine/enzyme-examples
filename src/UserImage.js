@@ -6,9 +6,4 @@ const UserImage = ({ imageSource = '', altText = '' }) => (
   </div>
   ));
 
-UserImage.propTypes = {
-  imageSource: PropTypes.string,
-  altText: PropTypes.string,
-};
-
 export default UserImage;

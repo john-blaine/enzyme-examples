@@ -20,10 +20,4 @@ const UserInformation = ({ name = '', bio = '', location = '' }) => {
   );
 };
 
-UserInformation.propTypes = {
-  name: PropTypes.string,
-  bio: PropTypes.string,
-  location: PropTypes.string,
-};
-
 export default UserInformation;
