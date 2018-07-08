@@ -1,8 +1,12 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
+import { shallow, configure } from 'enzyme';
+configure({adapter: new Adapter()});
+
 import { expect } from 'chai';
 
 import Repositories from './Repositories';
+import Repository from './Repository';
 
 const repos = [
   {
@@ -36,5 +40,8 @@ const repos = [
 ];
 
 describe('<Repositories />', () => {
-
+  it('should render number of repos specified by top prop', () => {
+    const wrapper = shallow(<Repositories repositories={repos} top={2} />);
+    expect(wrapper.find(Repository)).to.have.length(2);
+  });
 });

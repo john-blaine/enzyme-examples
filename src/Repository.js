@@ -1,4 +1,4 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
 
 const Repository = ({ url = '', name = '', language = '', stars = 0 }) => ((
   <div className="gh-widget-container">
@@ -20,12 +20,5 @@ const Repository = ({ url = '', name = '', language = '', stars = 0 }) => ((
     </div>
   </div>
 ));
-
-Repository.propTypes = {
-  url: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
-  language: PropTypes.string.isRequired,
-  stars: PropTypes.number.isRequired,
-};
 
 export default Repository;

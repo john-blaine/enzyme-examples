@@ -1,4 +1,4 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
 
 // Components
 import Repository from './Repository';
@@ -28,11 +28,6 @@ const Repositories = ({ repositories = [], top }) => {
       <div className="gh-widget-repositories">{repos}</div>
     </div>
   );
-};
-
-Repositories.propTypes = {
-  repositories: PropTypes.array,
-  top: PropTypes.number,
 };
 
 export default Repositories;
