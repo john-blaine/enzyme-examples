@@ -2,6 +2,7 @@
 import React from 'react';
 import { mount } from 'enzyme';
 import { expect } from 'chai';
+import sinon from 'sinon';
 
 // Components
 import GithubWidget from './GithubWidget';
@@ -21,5 +22,11 @@ describe('<GithubWidget />', () => {
       <Repositories />,
       <Footer />
     ])).to.equal(true);
+  });
+
+  it('should call componentDidMount once', () => {
+    sinon.spy(GithubWidget.prototype, 'componentDidMount');
+    mount(<GithubWidget username="test" />);
+    expect(GithubWidget.prototype.componentDidMount.calledOnce).to.equal(true);
   });
 });
